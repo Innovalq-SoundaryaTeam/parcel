@@ -2,6 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('pp_theme') || 'light';
+        var effective = t === 'auto'
+          ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+          : t;
+        document.documentElement.setAttribute('data-theme', effective);
+        var rtl = localStorage.getItem('pp_rtl') === 'true';
+        if (rtl) document.documentElement.setAttribute('dir', 'rtl');
+      } catch (e) {}
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Sign in to your ParcelPro customer account to manage shipments, track parcels, view invoices and access your dashboard." />
   <title>Login - ParcelPro | Sign In to Your Account</title>
