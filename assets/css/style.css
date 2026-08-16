@@ -416,7 +416,10 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .nav-actions [data-rtl-toggle] {
   height: 42px !important;
+  min-width: 42px !important;
   padding: 0 14px !important;
+  margin-left: 0 !important;
+  border-radius: 12px !important;
   color: var(--primary) !important;
   border-color: var(--primary) !important;
   background: transparent !important;
