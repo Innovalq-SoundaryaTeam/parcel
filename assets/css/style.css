@@ -1510,6 +1510,18 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 500;
 }
 .page-header .breadcrumb-item.active { color: var(--primary); }
+.page-header .sub-title {
+  display: inline-block;
+  padding: 6px 18px;
+  background: linear-gradient(135deg, rgba(30,64,175,0.1), rgba(59,130,246,0.1));
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 .page-header h1 {
   text-align: center;
   font-size: 3.25rem;
