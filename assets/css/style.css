@@ -1243,6 +1243,44 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 12px 16px;
 }
 
+/* ========== Contact Office Cards ========== */
+.office-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.office-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+.office-flag {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.office-card h5 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+.office-card p {
+  color: var(--gray-500);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.office-card p:last-child { margin-bottom: 0; }
+
 /* ========== Partners Section ========== */
 .partners-section {
   padding: 70px 0;
