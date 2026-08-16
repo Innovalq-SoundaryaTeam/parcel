@@ -388,6 +388,17 @@ img { max-width: 100%; height: auto; display: block; }
   }
 }
 .nav-actions { display: flex; align-items: center; gap: 12px; }
+/* Prevent nav overflow at "in-between" desktop widths (992-1600px) where the
+   default nav-link padding + nav-actions gaps no longer fit in one row. */
+@media (min-width: 992px) and (max-width: 1600px) {
+  .navbar .container { max-width: 96%; }
+  .navbar-nav .nav-link { padding: 10px 11px !important; font-size: 14px; }
+  .navbar-nav.gap-2 { gap: 2px; }
+  .nav-actions { gap: 6px; }
+  .nav-actions #authNavMenu > .btn,
+  .nav-actions > .btn,
+  .nav-actions > a.btn { padding-left: 12px; padding-right: 12px; }
+}
 .nav-actions #authNavMenu { vertical-align: middle; }
 .nav-actions #authNavMenu > .btn,
 .nav-actions > .btn,
