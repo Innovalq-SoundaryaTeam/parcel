@@ -68,7 +68,7 @@ p { margin-bottom: 1rem; color: var(--gray-600); }
 
 a {
   color: var(--primary);
-  text-decoration: none;
+  text-decoration: none !important;
   transition: var(--transition);
 }
 a:hover { color: var(--primary-dark); }
