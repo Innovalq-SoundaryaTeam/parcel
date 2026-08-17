@@ -414,6 +414,17 @@ img { max-width: 100%; height: auto; display: block; }
   margin-left: 0.55rem;
   vertical-align: 0;
 }
+.auth-user-name {
+  display: inline-block;
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+@media (min-width: 992px) and (max-width: 1600px) {
+  .auth-user-name { max-width: 60px; }
+}
 .nav-actions [data-rtl-toggle] {
   height: 42px !important;
   min-width: 42px !important;
