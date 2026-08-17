@@ -115,6 +115,50 @@
   padding-left: 48px;
 }
 
+/* Email, phone, and URL values are always written left-to-right, even in RTL layouts.
+   Keep their text left-aligned and put their icon back on the left instead of following
+   the generic RTL flip above (which is meant for free-text fields like names). */
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="tel"],
+[dir="rtl"] input[type="url"] {
+  direction: ltr;
+  text-align: left;
+}
+
+[dir="rtl"] .input-icon-wrap:has(> input[type="email"]) > .bi:first-child,
+[dir="rtl"] .input-icon-wrap:has(> input[type="tel"]) > .bi:first-child,
+[dir="rtl"] .input-icon-wrap:has(> input[type="url"]) > .bi:first-child {
+  left: 16px;
+  right: auto;
+}
+
+[dir="rtl"] .input-icon-wrap:has(> input[type="email"]) .form-control,
+[dir="rtl"] .input-icon-wrap:has(> input[type="tel"]) .form-control,
+[dir="rtl"] .input-icon-wrap:has(> input[type="url"]) .form-control {
+  padding-left: 46px;
+  padding-right: 48px;
+}
+
+/* Careers application form uses Bootstrap input-groups with an icon segment.
+   Email/URL fields: keep the icon on the left, matching their LTR text.
+   Name/role fields: they correctly flip to RTL, so just swap the seamless-join borders. */
+[dir="rtl"] .apply-form-wrap .input-group:has(> input[type="email"]),
+[dir="rtl"] .apply-form-wrap .input-group:has(> input[type="url"]) {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .apply-form-wrap .input-group:has(> input[type="text"]) .input-group-text,
+[dir="rtl"] .apply-form-wrap .input-group:has(> select) .input-group-text {
+  border-left: none !important;
+  border-right: 2px solid var(--gray-200) !important;
+}
+
+[dir="rtl"] .apply-form-wrap .input-group:has(> input[type="text"]) .form-control,
+[dir="rtl"] .apply-form-wrap .input-group:has(> select) {
+  border-right: none !important;
+  border-left: 2px solid var(--gray-200) !important;
+}
+
 [dir="rtl"] .auth-page-actions {
   left: 24px;
   right: auto;
