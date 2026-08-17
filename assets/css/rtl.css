@@ -224,9 +224,12 @@
   margin-left: 0;
 }
 
-[dir="rtl"] .pricing-features li i {
-  margin-left: 10px;
-  margin-right: 0;
+[dir="rtl"] .pricing-features {
+  text-align: right;
+}
+
+[dir="rtl"] .pricing-features li {
+  text-align: right;
 }
 
 [dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
