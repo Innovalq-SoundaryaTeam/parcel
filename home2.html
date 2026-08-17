@@ -249,6 +249,41 @@
     }
     .h2-section-head p { font-size: 17px; color: #64748b; line-height: 1.65; margin: 0; }
 
+    /* ===== Pricing snapshot ===== */
+    .h2-price-card {
+      height: 100%;
+      background: #fff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 22px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .h2-price-card:hover { transform: translateY(-4px); box-shadow: 0 24px 44px -22px rgba(15,23,42,0.2); }
+    .h2-price-featured { border-color: #0ea5e9; box-shadow: 0 20px 40px -20px rgba(14,165,233,0.3); }
+    .h2-price-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: linear-gradient(120deg, #0ea5e9, #6366f1); color: #fff;
+      font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 999px;
+      display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+    }
+    .h2-price-name { font-weight: 800; font-size: 18px; color: #0f172a; margin-bottom: 4px; }
+    .h2-price-value { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 800; font-size: 34px; color: #0f172a; letter-spacing: -0.02em; }
+    .h2-price-value span { font-size: 15px; font-weight: 600; color: #64748b; }
+    .h2-price-desc { color: #64748b; font-size: 14px; margin: 8px 0 20px; line-height: 1.6; }
+    .h2-price-list { list-style: none; padding: 0; margin: 0 0 24px; flex-grow: 1; }
+    .h2-price-list li { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: #334155; }
+    .h2-price-list li i { color: #0ea5e9; font-size: 14px; }
+    .h2-link-arrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: #0f172a; text-decoration: none; }
+    .h2-link-arrow:hover { color: #0369a1; }
+    [data-theme="dark"] .h2-price-card { background: #0f172a; border-color: #1e293b; }
+    [data-theme="dark"] .h2-price-name,
+    [data-theme="dark"] .h2-price-value,
+    [data-theme="dark"] .h2-link-arrow { color: #f8fafc; }
+    [data-theme="dark"] .h2-price-list li { color: #cbd5e1; }
+
     /* ===== Industry verticals ===== */
     .h2-verticals { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
     .h2-vertical {
@@ -701,6 +736,61 @@
     <div class="text-center mt-5" data-aos="fade-up">
       <a href="locations.html" class="btn btn-outline-primary btn-lg me-2"><i class="bi bi-geo-alt me-1"></i> Find a Drop-Off Location</a>
       <a href="booking.html" class="btn btn-primary btn-lg"><i class="bi bi-box-seam me-1"></i> Book a Pickup or Drop-Off</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PRICING SNAPSHOT ==================== -->
+<section class="h2-section h2-section-alt">
+  <div class="container">
+    <div class="h2-section-head" data-aos="fade-up">
+      <span class="eyebrow">Simple, Transparent Pricing</span>
+      <h2>Know Your Cost Before You Drop Off</h2>
+      <p>No hidden fees. Pick a monthly plan that fits how often you ship, or get an instant quote for a single parcel with no plan needed.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="h2-price-card">
+          <div class="h2-price-name">Starter</div>
+          <div class="h2-price-value">$29<span>/mo</span></div>
+          <p class="h2-price-desc">Best for individuals shipping occasionally.</p>
+          <ul class="h2-price-list">
+            <li><i class="bi bi-check-lg"></i> Up to 50 shipments/month</li>
+            <li><i class="bi bi-check-lg"></i> Domestic delivery</li>
+            <li><i class="bi bi-check-lg"></i> Basic tracking dashboard</li>
+          </ul>
+          <a href="register.html" class="h2-btn-outline w-100 justify-content-center">Get Started</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="h2-price-card h2-price-featured">
+          <span class="h2-price-badge"><i class="bi bi-star-fill"></i> Most Popular</span>
+          <div class="h2-price-name">Business</div>
+          <div class="h2-price-value">$79<span>/mo</span></div>
+          <p class="h2-price-desc">Best for growing companies shipping regularly.</p>
+          <ul class="h2-price-list">
+            <li><i class="bi bi-check-lg"></i> Up to 1,000 shipments/month</li>
+            <li><i class="bi bi-check-lg"></i> All shipping services</li>
+            <li><i class="bi bi-check-lg"></i> Priority support + REST API</li>
+          </ul>
+          <a href="register.html" class="h2-btn-primary w-100 justify-content-center">Get Started</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="h2-price-card">
+          <div class="h2-price-name">Just shipping once?</div>
+          <div class="h2-price-value" style="font-size:22px;">No plan needed</div>
+          <p class="h2-price-desc">Get an instant rate based on distance, weight and delivery speed — no sign-up required.</p>
+          <ul class="h2-price-list">
+            <li><i class="bi bi-check-lg"></i> Pay per shipment</li>
+            <li><i class="bi bi-check-lg"></i> Quote in seconds</li>
+          </ul>
+          <a href="pricing.html#calculator" class="h2-btn-outline w-100 justify-content-center"><i class="bi bi-calculator"></i> Get a Quick Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="pricing.html" class="h2-link-arrow">Compare all plans &amp; full pricing details <i class="bi bi-arrow-right"></i></a>
     </div>
   </div>
 </section>
